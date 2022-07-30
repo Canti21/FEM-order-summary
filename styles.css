@@ -1,0 +1,249 @@
+:root
+{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desatured-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+html
+{
+    font-size: 62.5%;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: var(--pale-blue);
+    position: relative;
+}
+
+main
+{
+    padding: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: calc(100vh - 5.2rem);
+}
+
+.background-img
+{
+    width: 100vw;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.order-card-container
+{
+    max-width: 44rem;
+    width: 100%;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--desatured-blue);
+    background-color: white;
+    border-radius: 1.6rem;
+    box-shadow: 0 1.7rem 5rem -4rem rgba(0,0,0,0.75);
+}
+
+.hero
+{
+    width: 100%; 
+    border-radius: 1.6rem 1.6rem 0 0;
+}
+
+.order-card-info
+{
+    padding: 2.6rem;
+}
+
+.order-card-title
+{
+    font-weight: 900;
+    font-size: 2.3rem;
+    color: var(--dark-blue);
+    margin: 0.6rem;
+}
+
+.order-card-description
+{
+    line-height: 2.6rem;
+    margin: 2rem 0;
+    padding: 0 0.6rem;
+}
+
+.plan-detail
+{
+    display: grid;
+    grid-template-columns: 5rem 1fr 6rem;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100%-2.6rem);
+    padding: 1.4rem;
+    background-color: var(--very-pale-blue);
+
+    border-radius: 1rem;
+}
+
+.plan-detail > img
+{
+    width: 4.9rem;
+    height: 4.9rem;
+}
+
+.plan-detail-info
+{
+    line-height: 0.6rem;
+    text-align: left;
+    margin: 0 2rem;
+}
+
+.plan-title
+{
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.plan-detail > a
+{
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--bright-blue);
+}
+
+.plan-detail > a:hover
+{
+    color: #766cf1;
+}
+
+.to-payment-btn
+{
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    border: none;
+    margin: 2.4rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: 0 1.6rem 1rem 0 rgba(182, 193, 219, 0.4);
+}
+
+.to-payment-btn:hover
+{
+    background-color: #766cf1;
+}
+
+.cancel-order
+{
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--desatured-blue);
+}
+
+.cancel-order:hover
+{
+    color: var(--dark-blue);
+}
+
+.plan-detail > a,
+.to-payment-btn,
+.cancel-order
+{
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+footer
+{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    gap: 0.3rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.attribution
+{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.attribution a
+{
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+#canti
+{
+    color: darkred;
+}
+
+@media (max-width: 370px)
+{
+    main
+    {
+        padding: 1rem;
+        min-height: calc(100vh - 2rem);
+    }
+
+    .order-card-info
+    {
+        padding: 1rem;
+    }
+
+    .plan-title,
+    .plan-price
+    {
+        margin: 0;
+        line-height: 2rem;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .order-card-container
+    {
+        font-size: 1.6rem;
+        box-shadow: 0 2.7rem 5rem -4rem rgba(42, 65, 241, 0.75);
+    }
+
+    .order-card-title
+    {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+
+    .order-card-info
+    {
+        padding: 4.6rem;
+    }
+
+    .plan-detail
+    {
+        padding: 2rem;
+        font-size: 1.7rem;
+    }
+    
+    .to-payment-btn
+    {
+        margin: 3rem 0;
+    }
+}
